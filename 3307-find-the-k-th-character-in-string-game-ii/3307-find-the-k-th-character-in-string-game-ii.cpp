@@ -9,7 +9,6 @@ public:
                  k-=pow(2,c);
             }
         }
-        cout<<t;
         t=t%26;
         return 'a'+t;
 
