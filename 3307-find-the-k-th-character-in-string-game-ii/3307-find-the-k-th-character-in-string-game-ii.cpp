@@ -10,7 +10,7 @@ public:
             }
         }
         cout<<t;
-        t=t%25;
+        t=t%26;
         return 'a'+t;
 
 
