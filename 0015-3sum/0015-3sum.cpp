@@ -8,7 +8,7 @@ public:
             while(j<k){
                 if(0 == nums[i]+nums[j]+nums[k]){
                     ans.insert({nums[i],nums[j],nums[k]});
-                    break;
+                    j++;
                 }
                 else if(0<nums[i]+nums[j]+nums[k]){
                     k--;
