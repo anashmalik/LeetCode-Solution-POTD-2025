@@ -6,14 +6,14 @@ public:
         return ans;
 
     }
-    void help(vector<int>nums,int i){
+    void help(vector<int>&nums,int i){
         if(i==nums.size())ans.push_back(nums);
         for(int j=i;j<nums.size();j++){
-            auto t=nums;
-            swap(t[i],t[j]);
-            help(t,i+1);
+            swap(nums[i],nums[j]);
+            help(nums,i+1);
+            swap(nums[i],nums[j]);
         }
-        
+
     }
 
 
