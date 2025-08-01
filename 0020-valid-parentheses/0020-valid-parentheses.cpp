@@ -4,15 +4,15 @@ public:
         stack<int>st;
         for(auto x:s){
             if(x==')'){
-                if(st.top()!= '(')return 0;
+                if(st.size()==0||st.top()!= '(')return 0;
                 st.pop();
             }
             else if (x==']'){
-                if(st.top()!= '[')return 0;
+                if(st.size()==0||st.top()!= '[')return 0;
                 st.pop();   
             }
             else if (x=='}'){
-               if(st.top()!= '{')return 0;
+               if(st.size()==0||st.top()!= '{')return 0;
                 st.pop();
             }
             else{
