@@ -5,7 +5,6 @@ public:
         for(auto x:strs){
             auto y=x;
             sort(y.begin(),y.end());
-            if(mp.find(y)== mp.end()) mp[y]={};
             mp[y].push_back(x);
         }
         vector<vector<string>> ans;
