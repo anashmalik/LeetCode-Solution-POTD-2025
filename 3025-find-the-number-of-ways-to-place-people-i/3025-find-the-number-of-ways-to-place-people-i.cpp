@@ -1,26 +1,22 @@
+// this version is slight modified for LC 3027
 class Solution {
 public:
-    int numberOfPairs(vector<vector<int>>& p) {
-        int n = p.size(),ans=0;
-
-        for(int i=0;i<n;i++){
-            for(int j=0;j<n;j++){
-
-                if(p[i][0]>= p[j][0] && p[i][1]<= p[j][1]){
-                    int re=1;
-                    for(int k=0;k<n;k++){
-                        if(k==i || k==j) continue;
-                        if(p[k][0]<= p[i][0] && p[k][0] >= p[j][0] && p[k][1]>= p[i][1] && p[k][1] <= p[j][1] ){
-                            re=0;
-                            // cout<<k;
-                            break;
-                        }
-                    }
-                    ans+=re;
+    static bool cmp(const vector<int>& p, const vector<int>& q){
+        return (p[0]==q[0])?p[1]<q[1]:p[0]>q[0];// order by (x, >)
+    }
+    static int numberOfPairs(vector<vector<int>>& P) {
+        sort(P.begin(), P.end(), cmp);
+        int n = P.size(), ans = 0;
+        for(int i=0; i<n-1; i++){
+            int y=INT_MAX, yi=P[i][1];
+            for(int j = i+1; j<n; j++){
+                const int yj=P[j][1];
+                if (yj>=yi && y>yj){//P[j] cannot be in between
+                    ans++;
+                    y=yj;
                 }
-
             }
         }
-        return ans-n;
+        return ans;
     }
 };
