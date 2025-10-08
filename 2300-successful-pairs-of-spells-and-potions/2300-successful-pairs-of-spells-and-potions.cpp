@@ -7,7 +7,7 @@ public:
         }
         return s;
     }
-    int help(vector<int>& p,long long x,int target){
+    int help(vector<int>& p,long long x,long long target){
         int n = p.size();
         int low = 0, high = n - 1, ans = n;
 
