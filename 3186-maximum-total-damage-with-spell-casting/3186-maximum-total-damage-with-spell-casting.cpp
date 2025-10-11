@@ -20,10 +20,11 @@ public:
 
         long long t= (long long) mp[s[i]];
         long long v= s[i],k=i;
-        while(i<s.size() && s[i]<v+2){
+        while(i<s.size() && s[i]<=v+2){
             i++;
         }
         ans = max(ans,help(s,i,dp)+(t*v));
+        // cout<<k<<" "<<i<<" "<<ans<<endl;
         return dp[k]= ans;
     }
 };
