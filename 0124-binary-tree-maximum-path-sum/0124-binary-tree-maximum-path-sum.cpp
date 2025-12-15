@@ -13,6 +13,7 @@ class Solution {
 public:
     int ans=0,MOD= 1e9+7;
     int maxPathSum(TreeNode* root) {
+        ans = root->val;
         int t= help(root);
         return ans;        
     }
