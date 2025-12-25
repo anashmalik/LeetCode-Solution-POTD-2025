@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/create-hello-world-function/?envType=study-plan-v2&envId=30-days-of-javascript">2667. Create Hello World Function</a></h2><h3>Easy</h3><hr>Write a function&nbsp;<code>createHelloWorld</code>.&nbsp;It should return a new function that always returns&nbsp;<code>&quot;Hello World&quot;</code>.
+<h2><a href="https://leetcode.com/problems/counter/description/?envType=study-plan-v2&envId=30-days-of-javascript">2667. Create Hello World Function</a></h2><h3>Easy</h3><hr>Write a function&nbsp;<code>createHelloWorld</code>.&nbsp;It should return a new function that always returns&nbsp;<code>&quot;Hello World&quot;</code>.
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
