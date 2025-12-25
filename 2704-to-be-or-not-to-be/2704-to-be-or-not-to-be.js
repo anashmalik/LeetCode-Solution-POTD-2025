@@ -6,11 +6,11 @@ var expect = function(val) {
     const v=val;
     return {
         toBe:function (x){
-            if(x===v) return {"value":true};
+            if(x===v) return true;
             else throw new Error("Not Equal");
         },
         notToBe:function (x){
-            if(x!==v) return {"value":true};
+            if(x!==v) return true;
             else throw new Error("Equal");
         }
     }
