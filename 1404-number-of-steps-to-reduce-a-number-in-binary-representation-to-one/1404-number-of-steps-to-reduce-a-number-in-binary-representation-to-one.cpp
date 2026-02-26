@@ -1,21 +1,27 @@
 class Solution {
 public:
     int numSteps(string s) {
-        int number=0,ans=0,n=s.size();
+        long long number=0,ans=0,n=s.size(),c=0;
         for(int i=n-1;i>=0;i--){
+            if(c==0 and i==0)continue;
             if(s[i]=='1'){
-                number+= pow(2,n-i-1);
-            }
-        }
-        // cout<<number<<endl;
-        while(number!=1){
-            if(number%2==0){
-                number/=2;
+                if(c==0){
+                    c=1;
+                    ans+=2;
+                }
+                else{
+                    ans++;
+                }
             }
             else{
-                number++;
+                if(c==0){
+                    ans++;
+                }
+                else{
+                    ans++;
+                    ans++;
+                }
             }
-            ans++;
         }
         return ans;
     }
