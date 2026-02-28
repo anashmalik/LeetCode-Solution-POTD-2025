@@ -1,22 +1,11 @@
 class Solution {
-    int MOD= 1e9+7;
 public:
+    const int mod= 1e9+7;
     int concatenatedBinary(int n) {
-        long long ans=0,p=1;
-        int c=0;
-        while(n){
-            int x=n;
-            while(x){
-                if(x%2==1){
-                    ans= (ans + p)%MOD;
-                }
-                c++;
-                x/=2;
-                p= (p*2)%MOD;
-            }
-            n--;
+        long ans=0;
+        for(int i=1;i<=n;++i){
+            ans=((ans<<(bit_width((unsigned)i))) | i )%mod;
         }
         return ans;
-
     }
 };
